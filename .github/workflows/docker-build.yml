@@ -25,10 +25,9 @@ jobs:
          minikube start
          kubectl config use-context minikube
 
-
-
     - name: Start Minikube
       run: |
+        minikube delete || true
         minikube start --driver=none
         kubectl config use-context minikube
 
