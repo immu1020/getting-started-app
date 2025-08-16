@@ -28,7 +28,7 @@ jobs:
     - name: Start Minikube
       run: |
         minikube delete || true
-        minikube start --driver=none
+        minikube start --driver=none --force
         kubectl config use-context minikube
 
     - name: Log in to Docker Hub
